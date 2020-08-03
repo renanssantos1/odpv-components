@@ -10,23 +10,3 @@ $font-family: "Roboto", "Helvetica Neue", "Arial", sans-serif;
 $font-size: 16px;
 $line-height: 20px;
 $font-weight: 400;
-
-// grid system variables
-$gutter-width: 1rem;
-$outer-margin: 2rem;
-$gutter-compensation: calc($gutter-width * 0.5 * -1);
-$half-gutter-width: calc($gutter-width * 0.5);
-
-$xs-min: 30;
-$sm-min: 48;
-$md-min: 64;
-$lg-min: 75;
-
-$screen-xs-min: $xs-min em;
-$screen-sm-min: $sm-min em;
-$screen-md-min: $md-min em;
-$screen-lg-min: $lg-min em;
-
-$container-sm: calc($sm-min + $gutter-width);
-$container-md: calc($md-min + $gutter-width);
-$container-lg: calc($lg-min + $gutter-width);
