@@ -22,6 +22,11 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "switch" */ "../views/Switch.vue"),
   },
+  {
+    path: "/form",
+    name: "Form",
+    component: () => import(/* webpackChunkName: "form" */ "../views/Form.vue"),
+  },
 ];
 
 const router = new VueRouter({

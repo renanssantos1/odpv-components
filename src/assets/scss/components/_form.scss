@@ -1,0 +1,66 @@
+$this: ".odpv.form";
+
+#{$this} {
+  &__label {
+    display: inline-block;
+    margin: 5px 0;
+
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    color: $color-dark-grey;
+
+    &[for] {
+      cursor: pointer;
+    }
+  }
+
+  select#{$this}__control,
+  textarea#{$this}__control,
+  &__control[type="text"],
+  &__control[type="password"],
+  &__control[type="datetime"],
+  &__control[type="datetime-local"],
+  &__control[type="date"],
+  &__control[type="month"],
+  &__control[type="time"],
+  &__control[type="week"],
+  &__control[type="number"],
+  &__control[type="email"],
+  &__control[type="url"],
+  &__control[type="search"],
+  &__control[type="tel"],
+  &__control[type="color"],
+  &__control[type="file"] {
+    display: block;
+    width: 100%;
+
+    padding: $input-padding-base;
+    margin: 0;
+
+    font-size: $font-size;
+    color: $text-default-color;
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-appearance: none;
+
+    background-color: $color-white;
+    box-shadow: inset 0 0 4px 0 $color-light-grey;
+
+    border: 0;
+
+    &:-webkit-autofill {
+      -webkit-text-fill-color: $color-black !important;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 4px 0 $color-dark-grey;
+    }
+  }
+}

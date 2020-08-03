@@ -11,6 +11,9 @@
         <li>
           <router-link to="/switch">switch</router-link>
         </li>
+        <li>
+          <router-link to="/form">form</router-link>
+        </li>
       </ul>
     </header>
 
