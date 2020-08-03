@@ -11,6 +11,7 @@ $this: ".odpv.switch";
   border-radius: 50px;
   box-shadow: inset -20px 0 0 0 #ffffff;
   transition-duration: 200ms;
+  cursor: pointer;
 
   &--container {
     display: flex;
@@ -37,6 +38,15 @@ $this: ".odpv.switch";
     &:after {
       left: 20px;
       box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+    &:checked {
+      border-color: $color-grey-smoke;
+      box-shadow: inset 20px 0 0 0 $color-grey-smoke;
     }
   }
 

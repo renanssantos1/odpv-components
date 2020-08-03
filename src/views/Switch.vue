@@ -26,5 +26,25 @@
     </label>
 
     <input id="switch-orange" class="odpv switch switch--orange" type="checkbox" />
+
+    <input disabled id="switch-orange" class="odpv switch switch--orange" type="checkbox" />
+
+    <input
+      v-model="check"
+      disabled
+      id="switch-orange"
+      class="odpv switch switch--orange"
+      type="checkbox"
+    />
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      check: true,
+    };
+  },
+};
+</script>
