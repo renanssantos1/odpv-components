@@ -35,3 +35,37 @@ $color-fire-engine-red  : rgb(196, 31, 31);         // #C41F1F  OK
 $color-green            : rgb(96,198,89);           // #60C659  OK  (Success)
 $color-dark-pastel-green: rgb(25, 174, 53);         // #19AE35  OK
 $color-dark-green       : rgb(25, 174, 53);         // #19AE35  OK
+
+
+
+$rose: #f13335;
+$ice: #f8f8f8;
+$cloud: #d4d7d9;
+
+
+
+// Form
+$input-height-base : 40px;
+$input-padding-base: 5px 10px;
+
+// Text Color
+$text-default-color: $color-black;
+
+// Buttons Color
+$text-button-color: $color-white;
+
+// Label
+$label-font-color      : $color-secondary;
+$label-border-color    : $color-secondary;
+$label-focus-background: #ccedf8;
+
+// Form
+$label-font-color         : $color-grey;
+$input-border-color       : $color-light-grey;
+$input-placeholder-color  : $color-light-grey;
+$input-border-focus-color : $color-secondary;
+$input-invalid-text       : #d62828;
+$input-invalid-border     : $rose;
+$input-disabled-background: $ice;
+$input-disabled-border    : $cloud;
+$input-disabled-text      : $cloud;
