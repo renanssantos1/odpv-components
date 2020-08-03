@@ -1,0 +1,59 @@
+$this: ".odpv.switch";
+
+#{$this} {
+  position: relative;
+  appearance: none;
+  outline: none;
+  width: 50px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid #d9dadc;
+  border-radius: 50px;
+  box-shadow: inset -20px 0 0 0 #ffffff;
+  transition-duration: 200ms;
+
+  &--container {
+    display: flex;
+    align-items: center;
+    text-transform: lowercase;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 26px;
+    height: 26px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  &:checked {
+    border-color: $color-dark-pastel-green;
+    box-shadow: inset 20px 0 0 0 $color-dark-pastel-green;
+
+    &:after {
+      left: 20px;
+      box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  $switch_colors: ("orange", $color-orange, $color-white),
+    ("yellow", $color-lightning-yellow, $color-black),
+    ("green", $color-green, $color-white), ("red", $color-red, $color-white),
+    ("black", $color-black, $color-white), ("white", $color-white, $color-black),
+    ("facebook", $color-blue-facebook, $color-white),
+    ("primary", $color-primary, $color-white),
+    ("secondary", $color-secondary, $color-white);
+
+  @each $switch_class, $switch_bgColor, $switch_txtColor in $switch_colors {
+    &--#{$switch_class} {
+      &:checked {
+        border-color: $switch_bgColor;
+        box-shadow: inset 20px 0 0 0 $switch_bgColor;
+      }
+    }
+  }
+}
