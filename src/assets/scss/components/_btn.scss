@@ -99,4 +99,136 @@ $this: ".odpv.btn";
       box-shadow: none;
     }
   }
+
+  &--loading {
+    &.transparent {
+      background-color: transparent;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+      }
+
+      &:before {
+        border-color: $color-secondary;
+        border-right-color: transparent;
+      }
+    }
+
+    &:before {
+      position: relative;
+      content: " ";
+      display: inline-block;
+
+      box-sizing: border-box;
+      overflow: hidden;
+
+      vertical-align: middle;
+      text-indent: -9999px;
+
+      border: 3px solid $color-white;
+      border-right-color: transparent;
+      border-radius: 100%;
+
+      width: 18px;
+      height: 18px;
+      margin: -3px 0 0 5px;
+
+      animation: three-quarters 1s infinite linear;
+    }
+
+    &:disabled,
+    &.disabled {
+      &:before {
+        border-color: $color-grey;
+        border-right-color: transparent;
+      }
+    }
+  }
+
+  &--link {
+    background: transparent;
+    color: $color-secondary;
+
+    &:hover:not(:disabled),
+    &:active,
+    &:focus {
+      color: $color-secondary;
+      background: rgba ($color-secondary, 0.1);
+    }
+
+    &.disabled,
+    &:disabled {
+      color: darken($color-light-grey, 15%);
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
+  $btn_colors: ("orange", $color-orange, $color-white),
+    ("yellow", $color-lightning-yellow, $color-black),
+    ("green", $color-green, $color-white), ("red", $color-red, $color-white),
+    ("black", $color-black, $color-white), ("white", $color-white, $color-black),
+    ("facebook", $color-blue-facebook, $color-white);
+
+  @each $btn_class, $btn_bgColor, $btn_txtColor in $btn_colors {
+    &--#{$btn_class} {
+      color: $btn_txtColor;
+      background-color: $btn_bgColor;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: darken($btn_bgColor, 10%);
+      }
+
+      &#{$this} {
+        &--bordered {
+          color: $btn_bgColor;
+          background-color: transparent;
+          border-color: $btn_bgColor;
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: $btn_bgColor;
+            background-color: transparent;
+          }
+        }
+
+        &--link {
+          color: $btn_bgColor;
+          background-color: transparent;
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: $btn_bgColor;
+            background-color: rgba($btn_bgColor, 0.1);
+          }
+
+          &.disabled,
+          &:disabled {
+            color: darken($color-light-grey, 15%) !important;
+            box-shadow: none;
+          }
+        }
+      }
+
+      &.disabled,
+      &:disabled {
+        cursor: default;
+        color: darken($color-light-grey, 15%) !important;
+        background-color: $color-light-grey !important;
+        border-color: $color-light-grey !important;
+
+        &:hover,
+        &:active,
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
 }

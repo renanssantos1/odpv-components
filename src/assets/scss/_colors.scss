@@ -1,18 +1,37 @@
-$color-primary: #d9487f;
-$color-primary--variant:   #CF2B69;
+$color-primary:            rgb(217, 72, 127);        // #d9487f
+$color-primary--variant:   rgb(207, 43, 105);        // #cf2b69
 
-$color-secondary : rgb(0,71,141); // #00478D
-$color-secondary--variant : rgb(0,71,141); // #00478D
+$color-secondary:          rgb(0, 71, 141);
+$color-secondary--variant: rgb(0, 71, 141);
 
 /*   Widget colors
 ---------------------------------------------------------------------------*/
 
-$color-white            : rgb(255, 255, 255);       // #FFFFFF
-$color-white-smoke      : rgb(248, 248, 248);       // #F8F8F8  OK  (Sector Background)
+$color-white:             rgb(255, 255, 255);
+$color-white-smoke:       rgb(248, 248, 248);
 
-$color-grey-smoke       : rgb(238, 238, 238);       // #EEEEEE
-$color-light-grey       : rgb(212, 215, 217);       // #D4D7D9  OK  (Sector Borders and Division Borders)
-$color-grey             : rgb(157, 166, 173);       // #9DA6AD  OK  (Input Borders)
-$color-dark-grey        : rgb(122, 128, 133);       // #7A8085  OK  (Labels)
+$color-grey-smoke:        rgb(238, 238, 238);
+$color-light-grey:        rgb(212, 215, 217);
+$color-grey:              rgb(157, 166, 173);
+$color-dark-grey:         rgb(122, 128, 133);
 
-$color-black            : rgb(45, 45, 45);          // #2D2D2D  OK  (Text Base)
+$color-black:             rgb(45, 45, 45);
+$color-darkness         : rgb(51, 51, 51);          // #333333  OK
+
+$color-lightning-yellow : rgb(255, 198, 30);        // #FFC61E  OK  
+$color-gamboge          : rgb(216, 163, 13);        // #D8A30D  OK
+
+$color-orange           : rgb(252, 163, 17);        // #FCA311  OK  
+$color-soft-orange      : rgb(255, 141, 80);        // #FF8D50  OK  
+$color-tahiti-gold      : #EC820A;                  // #EC820A  OK  
+
+$color-light-blue       : rgb(245, 250, 252);       // #F5FAFC  OK  
+
+$color-blue-facebook    : rgb(58, 87, 149);         // #3A5795  OK
+
+$color-red              : rgb(241, 51, 53);         // #F13335  OK  (Error)
+$color-fire-engine-red  : rgb(196, 31, 31);         // #C41F1F  OK
+
+$color-green            : rgb(96,198,89);           // #60C659  OK  (Success)
+$color-dark-pastel-green: rgb(25, 174, 53);         // #19AE35  OK
+$color-dark-green       : rgb(25, 174, 53);         // #19AE35  OK
