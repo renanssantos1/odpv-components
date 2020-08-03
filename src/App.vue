@@ -1,9 +1,17 @@
 <template>
   <div id="app" class="container">
     <header>
-      <router-link to="/">Home</router-link>
-
-      <router-link to="/button">Button</router-link>
+      <ul>
+        <li>
+          <router-link to="/">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/button">button</router-link>
+        </li>
+        <li>
+          <router-link to="/switch">switch</router-link>
+        </li>
+      </ul>
     </header>
 
     <main>
