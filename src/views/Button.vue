@@ -21,6 +21,14 @@
     <button class="odpv btn btn--orange btn--link" type="button">
       Orange
     </button>
+
+    <button class="odpv btn btn--orange btn--facebook" type="button">
+      facebook
+    </button>
+
+    <button class="odpv btn btn--black" type="button">
+      black
+    </button>
   </div>
 </template>
 
