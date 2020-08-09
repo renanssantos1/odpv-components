@@ -1,26 +1,22 @@
 <template>
-  <div>
-    <button class="odpv btn">
-      <span>button</span>
-    </button>
+  <div class="row">
+    <div class="col col-md-6">
+      <button class="odpv btn">
+        <span>button</span>
+      </button>
+    </div>
 
     <button class="odpv btn btn--bordered">
       <span>button</span>
     </button>
 
-    <button class="odpv btn btn--loading">
-      <span>button</span>
-    </button>
+    <button class="odpv btn btn--block btn--loading"></button>
 
     <button class="odpv btn btn--facebook">facebook</button>
 
-    <button class="odpv btn btn--orange btn--bordered" type="button">
-      Orange
-    </button>
+    <button class="odpv btn btn--orange btn--bordered" type="button">Orange</button>
 
-    <button class="odpv btn btn--orange btn--link" type="button">
-      Orange
-    </button>
+    <button class="odpv btn btn--orange btn--link" type="button">Orange</button>
   </div>
 </template>
 

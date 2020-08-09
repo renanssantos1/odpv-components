@@ -135,7 +135,7 @@ $this: ".odpv.btn";
       height: 18px;
       margin: -3px 0 0 5px;
 
-      animation: three-quarters 1s infinite linear;
+      animation: spinner 0.6s linear infinite;
     }
 
     &:disabled,
@@ -230,5 +230,11 @@ $this: ".odpv.btn";
         }
       }
     }
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
   }
 }
