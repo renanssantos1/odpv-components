@@ -170,8 +170,7 @@ $this: ".odpv.btn";
     ("yellow", $color-lightning-yellow, $color-black),
     ("green", $color-green, $color-white), ("red", $color-red, $color-white),
     ("black", $color-black, $color-white), ("white", $color-white, $color-black),
-    ("facebook", $color-blue-facebook, $color-white);
-
+    ("facebook", $color-blue-facebook, $color-white), ("blue", $color-secondary);
   @each $btn_class, $btn_bgColor, $btn_txtColor in $btn_colors {
     &--#{$btn_class} {
       color: $btn_txtColor;
