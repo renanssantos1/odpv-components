@@ -284,6 +284,7 @@ $this: ".odpv.form";
       &:checked {
         + #{$this}__label {
           &:before {
+            @include icons("check--blue.svg");
           }
         }
       }
@@ -291,6 +292,7 @@ $this: ".odpv.form";
       &:disabled {
         &:checked + #{$this}__label {
           &:before {
+            @include icons("check.svg");
           }
         }
       }
