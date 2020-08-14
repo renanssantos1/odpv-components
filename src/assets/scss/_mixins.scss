@@ -1,3 +1,7 @@
+@mixin icons($source) {
+  background-image: url("~@/assets/icons/"+$source);
+}
+
 @mixin title {
   font-size: 24px;
   line-height: 24px;
@@ -7,4 +11,174 @@
 @mixin margin {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+/* Border Radius
+   -------------------------------------------------------------------------- */
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin border-radius-right($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border-radius-left($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+/* Shadows
+   -------------------------------------------------------------------------- */
+
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+@mixin text-shadow($shadow) {
+  text-shadow: $shadow;
+}
+
+/* Forms
+   -------------------------------------------------------------------------- */
+
+@mixin placeholder-style {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal !important;
+
+  color: $input-placeholder-color;
+}
+
+/* Fonts
+   -------------------------------------------------------------------------- */
+
+@mixin font($size: null, $height: null, $weight: null) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin font-size-alerts {
+  font-size: 14px;
+}
+
+@mixin font-size-steps {
+  font-size: 14px;
+}
+
+@mixin font-size-pagination {
+  font-size: 14px;
+}
+
+/* Transitions
+   -------------------------------------------------------------------------- */
+
+@mixin transition($time: 0.25s) {
+  -o-transition: $time;
+  -moz-transition: $time;
+  -webkit-transition: $time;
+  transition: $time;
+}
+
+/* Animation
+   -------------------------------------------------------------------------- */
+
+@mixin animation($name, $time, $loop) {
+  -o-animation: #{$name} $time #{$loop};
+  -moz-animation: #{$name} $time #{$loop};
+  -webkit-animation: #{$name} $time #{$loop};
+  animation: #{$name} $time #{$loop};
+}
+
+/* User no select
+   -------------------------------------------------------------------------- */
+
+@mixin no-select() {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.no-select {
+  @include no-select();
+}
+
+/* Text truncate mixin
+   -------------------------------------------------------------------------- */
+
+@mixin truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-truncate,
+.truncate-text {
+  @include truncate();
+}
+
+/* Wrap Word mixin
+   -------------------------------------------------------------------------- */
+
+@mixin wrap-word() {
+  white-space: -webkit-pre-wrap; /*Chrome & Safari */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  white-space: pre-wrap; /* css-3 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  word-break: break-all;
+  white-space: normal;
+}
+
+.wrap-word {
+  @include wrap-word();
+}
+
+/* Responsive Utilities
+   -------------------------------------------------------------------------- */
+
+@mixin responsive-visibility() {
+  display: block !important;
+
+  &-inline {
+    display: inline !important;
+
+    &-block {
+      display: inline-block !important;
+    }
+  }
+}
+
+@mixin responsive-invisibility() {
+  display: none !important;
+
+  &-inline {
+    display: none !important;
+
+    &-block {
+      display: none !important;
+    }
+  }
+}
+
+/* Keyframe
+   -------------------------------------------------------------------------- */
+
+@mixin keyframe($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
 }
