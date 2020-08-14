@@ -3,6 +3,11 @@ html {
   -ms-overflow-style: scrollbar;
   -webkit-font-smoothing: antialiased;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+
 *,
 *::before,
 *::after {
