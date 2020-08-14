@@ -1,25 +1,22 @@
 <template>
   <header class="odpv header">
-    <nav>
-      <ul>
-        <li>
-          <ul>
-            <a href="#">Formulário</a>
-            <li>Input</li>
-            <li>Checkbox</li>
-            <li>Validação</li>
-            <li>Switch</li>
-            <li>Alertas</li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+    <div>
+      <img
+        class="logo"
+        src="https://ranek.origamid.dev/img/ranek.e7a4871b.svg"
+        alt=""
+      />
+    </div>
 
     <div>
-      <button>Menu</button>
+      <button @click="ativo = !ativo">abrir</button>
     </div>
-    <aside class="odpv header--aside">
+    <aside
+      class="odpv"
+      :class="ativo ? 'header--aside-ativo' : ' header--aside'"
+    >
       <ul>
+        <button @click="ativo = !ativo">fechar</button>
         <li v-for="i in 6" :key="i">Item de menu {{ i }}</li>
       </ul>
     </aside>
@@ -27,5 +24,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      ativo: false,
+    };
+  },
+};
 </script>
